@@ -67,19 +67,19 @@ function colors(color) {
   //Usar el statement Switch.
   switch(color){
     case 'blue':
-      console.log('This is blue');
+      return 'This is blue';
       break;
     case 'red':
-      console.log('This is red');
+      return 'This is red';
       break;
     case 'green':
-      console.log('This is green');
+      return 'This is green';
       break;
     case 'orange':
-      console.log('This is orange');
+      return 'This is orange';
       break;
     default:
-      console.log('Color not found');
+      return 'Color not found';
   }
 }
 
@@ -87,7 +87,7 @@ function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (numero === 10 || 5){
+  if (numero === 10 || numero === 5){
     return true;
   }
   return false;
@@ -97,7 +97,7 @@ function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (50 > numero > 20 ) {
+  if (numero < 50 && numero > 20 ) {
     return true;
   }
   return false;
@@ -140,15 +140,14 @@ function operadoresLogicos(num1, num2, num3) {
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
-  if (num2 < num1 > num3 && num1 > 0) {
-    return 'Número 1 es mayor y positivo';
-  } else if (num1 < 0 || num2 < 0 || num3 < 0) {
+  if (num1 < 0 || num2 < 0 || num3 < 0){
     return 'Hay negativos';
-  } else if (num1 < num3 > num2) {
-    num3 = num3 + 1;
-    return num3;
   } else if (num1 === 0 || num2 === 0 || num3 === 0) {
     return 'Error';
+  } else if (num1 > num2 && num1 > num3 && num1 > 0) {
+    return 'Número 1 es mayor y positivo';
+  } else if (num3 > num1 && num3 > num2) {
+    return num3 + 1;
   } else {
     return false;
   }
@@ -206,7 +205,7 @@ function doWhile(numero) {
   do {
     veces = veces + 1;
     numero = numero + 5;
-  } while (veces <= 8);
+  } while (veces < 8);
   return numero;
 }
 
