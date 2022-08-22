@@ -264,7 +264,6 @@ function continueStatement(numero) {
     array.push(numero)
   }
   return array;
-
 }
 
 
