@@ -28,19 +28,64 @@ function forEach(array, cb) {
   // Itera sobre la matriz "array" y pasa los valores al callback uno por uno
   // Pista: Estarás invocando a `cb` varias veces (una por cada valor en la matriz)
   //Tu código:
+
+  // for(var i = 0; i < array.length; i++){
+  //   cb(array[i])
+  // }
+
+  array.forEach(function(a){ 
+    cb(a)
+  })
 }
+ //array --> [1, 2, 3, 4]
+  //                   a
+  //array[2]
+  //cb --> function suma(s){
+  //       return  4 + 1
+ // }
+ //2, 3, 4, 5
+
 
 function map(array, cb) {
   // Crea un nuevo array
   // Itera sobre cada valor en "array", pásalo a `cb` y luego ubicar el valor devuelto por `cb` en un nuevo array
   // El nuevo array debe tener la misma longitud que el array del argumento
   //Tu código:
+  var nvoArray = array.map(function(elemento){
+    return cb(elemento)// 6
+  })
+  //nvoArray --> [3, 4, 5, 6]
+
+  return nvoArray;
 }
+// var arr = [1, 2, 3, 4]
+//                  elemento
+//function suma(s){
+//   return 4 + 2
+// }
+
+//map(arr, suma)
 
 function filter(array) {
   //Filtrar todos los elementos del array que comiencen con la letra "a".
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
+
+  // var nvoArray = array.filter(function(e){
+  //   return e.charAt(0) === "a"
+  // })
+  // return nvoArray;
+  // function igual (e){
+  //   return e.charAt(0) === "a"
+  // }
+  // return array.filter(igual)
+  var nvoArray = [];
+  for(var i = 0; i < array.length; i++){
+    if(array[i][0] === "a"){
+      nvoArray.push(array[i])
+    }
+  }
+  return nvoArray;
 }
 
 // No modificar nada debajo de esta línea
