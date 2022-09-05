@@ -36,11 +36,6 @@ function agregarPropiedad(objeto, property) {
   return objeto;
   
 }
-//agregarPropiedad({name: 'pri'}, edad)
-//{
-//   name: 'pri',
-//   property: null
-// }
 
 function invocarMetodo(objeto, metodo) {
   // "metodo" es una cadena que contiene el nombre de un método (funcion) en el objeto
@@ -132,11 +127,6 @@ function agregarAmigo(usuario, nuevoAmigo) {
   // Devuelve el objeto "usuario"
   // Tu código:
   
-  //usuario.amigos --> []
-  var friends = usuario.amigos; // []
-  friends.push(nuevoAmigo);
-  //usuario.amigos.push(nuevoAmigo)
-  return usuario;
 }
 
 function pasarUsuarioAPremium(usuarios) {
@@ -145,18 +135,6 @@ function pasarUsuarioAPremium(usuarios) {
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código:
-  // var arr = [1, 'string', {}]
-
-  //usuarios --> [{esPremium}, {esPremium}, {esPremium}]
-  //              usuarios[0]  usuarios[1]   usuarios[2]
-  //                  key           key           key
-  // for(var i = 0; i < usuarios.length; i++){
-  //   usuarios[i].esPremium = true;
-  // }
-  for(var key of usuarios){
-    key.esPremium = true;
-  }
-  return usuarios;
 }
 
 function sumarLikesDeUsuario(usuario) {
@@ -166,17 +144,6 @@ function sumarLikesDeUsuario(usuario) {
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
   // Tu código:
-
-  //usuario.posts --> [{likes: entero}, {likes: entero}, {likes: entero}]
-  var posts = usuario.posts;  //[ {likes: entero} , {likes: entero}, {likes: entero}]
-  var suma = 0;               //      posts[0]
-  // for(var i = 0; i < posts.length; i++){
-  //   suma = suma + posts[i].likes
-  // }
-  for(var key of posts){
-    suma = suma + key.likes
-  }
-  return suma;
 }
 
 function agregarMetodoCalculoDescuento(producto) {
@@ -189,16 +156,6 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
-
-  //
-
-  producto.calcularPrecioDescuento = function (){
-    var descuento = this.precio * producto.porcentajeDeDescuento
-    var precioConDescuento = producto.precio - descuento
-    return precioConDescuento;
-  }
-  
-  return producto;
 }
 // No modificar nada debajo de esta línea
 // --------------------------------
