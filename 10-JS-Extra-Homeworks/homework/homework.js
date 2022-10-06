@@ -10,6 +10,7 @@ function deObjetoAmatriz(objeto) {
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
+
 }
 
 
@@ -18,6 +19,7 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+
 }
 
 
@@ -35,6 +37,7 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+
 }
 
 
@@ -59,7 +62,6 @@ function capicua(numero) {
     return "No es capicua"
   }
 }
-
 
 function deleteAbc(cadena) {
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
@@ -89,16 +91,31 @@ function sortArray(arr) {
   //retorna -1 --> a , b
   //retorna 1 --> b, a
   //retorna 0 --> a, b
-  arr.sort(function (a, b){
-    if(a.length > b.length){
+
+  arr.sort(function (a, b) {
+    if (a.length > b.length) {
       return 1;
     }
-    if(a.length < b.length){
+    if (a.length < b.length) {
       return -1
     }
     return 0;
   });
   return arr;
+
+  // var recorrido = true;
+  // while(recorrido){
+  //   recorrido = false;
+  //   for(var i = 0; i < arr.length - 1; i++){
+  //     if(arr[i].length > arr[i + 1].length){
+  //       var string = arr[i];
+  //       arr[i] = arr[i+1];
+  //       arr[i + 1] = string;
+  //       recorrido = true;
+  //     }
+  //   }
+  // }
+  // return arr
 }
 
 
@@ -115,10 +132,9 @@ function buscoInterseccion(arreglo1, arreglo2) {
   //              j
 
   var nvoArray = [];
-  for(var i = 0; i < arreglo1.length; i++){
-    for(var j = 0; j < arreglo2.length; j++){
-      if(arreglo1[i] === arreglo2[j]){
-      //    4         ==     4
+  for (var i = 0; i < arreglo1.length; i++) {
+    for (var j = 0; j < arreglo2.length; j++) {
+      if (arreglo1[i] === arreglo2[j]) {
         nvoArray.push(arreglo1[i])
       }
     }
